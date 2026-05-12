@@ -5,10 +5,11 @@
   "type": "module",
 
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
   },
+git
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
