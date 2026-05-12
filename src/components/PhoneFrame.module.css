@@ -1,0 +1,83 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px 60px;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.phone {
+  width: 340px;
+  background: #0D0D14;
+  border-radius: 44px;
+  border: 1.5px solid rgba(255,255,255,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 0 0 6px rgba(255,255,255,0.03),
+    0 40px 100px rgba(0,0,0,0.7),
+    inset 0 0 0 1px rgba(255,255,255,0.04);
+  position: relative;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px 4px;
+  background: #0D0D14;
+  position: relative;
+  z-index: 10;
+}
+
+.clock {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: .5px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+
+.island {
+  width: 90px;
+  height: 28px;
+  background: #0D0D14;
+  border-radius: 14px;
+  margin: 0 auto 4px;
+  border: 1.5px solid rgba(255,255,255,0.07);
+  position: relative;
+  z-index: 10;
+}
+
+.screen {
+  flex: 1;
+  background: #0D0D14;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 640px;
+}
+
+.homeBar {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0D0D14;
+}
+
+.homeBarInner {
+  width: 120px;
+  height: 4px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 2px;
+}

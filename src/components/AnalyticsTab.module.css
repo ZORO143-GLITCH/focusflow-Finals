@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.statCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.statCard.wide { grid-column: 1 / -1; }
+
+.statVal {
+  font-family: var(--mono);
+  font-size: 24px;
+  font-weight: 500;
+}
+.statLbl {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.green  { color: var(--green); }
+.amber  { color: var(--amber); }
+.purple { color: #A78BFA; }
+
+.scoreCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+.scoreRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.scoreLbl { font-size: 12px; color: var(--muted); }
+.scoreVal {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--indigo);
+}
+.barTrack {
+  height: 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.barFill {
+  height: 100%;
+  background: var(--indigo);
+  border-radius: 3px;
+  transition: width .8s ease;
+}
+
+.histCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  flex: 1;
+}
+.histTitle {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  margin-bottom: 12px;
+}
+.empty {
+  font-size: 12px;
+  color: var(--subtle);
+  text-align: center;
+  padding: 20px 0;
+  line-height: 1.6;
+}
+
+.histRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 8px;
+}
+.histRow:last-child { border-bottom: none; }
+
+.histInfo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.histTask {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.histMeta { font-size: 11px; color: var(--subtle); }
+
+.histRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.histScore {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 500;
+}
+.histStatus { font-size: 10px; color: var(--subtle); }

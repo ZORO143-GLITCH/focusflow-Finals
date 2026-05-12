@@ -1,0 +1,71 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0A0A10;
+  --surface:   #111118;
+  --card:      #18181F;
+  --border:    rgba(255,255,255,0.08);
+  --border-hi: rgba(255,255,255,0.15);
+  --indigo:    #6366F1;
+  --indigo-dim:#4F46E5;
+  --indigo-glow: rgba(99,102,241,0.18);
+  --text:      #F0F0F8;
+  --muted:     #7E7E9A;
+  --subtle:    #3E3E52;
+  --green:     #34D399;
+  --amber:     #FBBF24;
+  --red:       #F87171;
+  --font:      'Sora', sans-serif;
+  --mono:      'JetBrains Mono', monospace;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: var(--font);
+  outline: none;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--subtle); border-radius: 2px; }
+
+/* ── Animations ── */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.8); }
+}
+@keyframes slide-up {
+  from { transform: translateY(40px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes blink-badge {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}

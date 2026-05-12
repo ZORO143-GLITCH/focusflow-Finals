@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.addRow {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  color: var(--text);
+  font-size: 13px;
+  transition: border-color .15s;
+}
+.input::placeholder { color: var(--subtle); }
+.input:focus { border-color: var(--indigo); background: rgba(99,102,241,0.06); }
+
+.addBtn {
+  width: 40px;
+  background: var(--indigo);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  transition: background .15s, transform .1s;
+}
+.addBtn:hover { background: var(--indigo-dim); }
+.addBtn:active { transform: scale(0.95); }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty {
+  text-align: center;
+  color: var(--subtle);
+  font-size: 13px;
+  padding: 24px 0;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  animation: slide-up .25s ease both;
+}
+.card:hover { border-color: var(--border-hi); }
+.card.active { border-color: var(--indigo); background: rgba(99,102,241,0.08); }
+.card.done { opacity: 0.4; }
+
+.check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--subtle);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .2s;
+}
+.check:hover { border-color: var(--indigo); }
+.check.checked { background: var(--green); border-color: var(--green); }
+
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  color: var(--text);
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.strikethrough { text-decoration: line-through; color: var(--subtle); }
+
+.sub {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.badge {
+  background: var(--indigo);
+  color: #C7D2FE;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
